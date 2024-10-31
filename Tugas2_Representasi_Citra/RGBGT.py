@@ -32,10 +32,10 @@ def convert_to_grayscale(image):
     return grayscale_image
 
 
-def convert_to_binary(image, threshold=128):
+def convert_to_Threshold(image, threshold=128):
     grayscale_image = convert_to_grayscale(image)
-    binary_image = (grayscale_image > threshold).astype(np.uint8) * 255
-    return binary_image
+    Threshold_image = (grayscale_image > threshold).astype(np.uint8) * 255
+    return Threshold_image
 
 
 image_paths = [
@@ -44,7 +44,7 @@ image_paths = [
     ('kenikir.jpg', 'Kenikir')
 ]
 
-titles = ["Red Channel", "Green Channel", "Blue Channel", "Grayscale Image", "Binary Image"]
+titles = ["Red Channel", "Green Channel", "Blue Channel", "Grayscale Image", "Threshold Image"]
 
 fig, axes = plt.subplots(len(image_paths), len(titles), figsize=(20, 15))
 
@@ -56,10 +56,10 @@ for row, (image_path, label) in enumerate(image_paths):
     green_channel = get_green_channel(image)
     blue_channel = get_blue_channel(image)
     grayscale_image = convert_to_grayscale(image)
-    binary_image = convert_to_binary(image, threshold=128)
+    Threshold_image = convert_to_Threshold(image, threshold=128)
     
     
-    images = [red_channel, green_channel, blue_channel, grayscale_image, binary_image]
+    images = [red_channel, green_channel, blue_channel, grayscale_image, Threshold_image]
     
     for col, (img, title) in enumerate(zip(images, titles)):
         ax = axes[row, col]

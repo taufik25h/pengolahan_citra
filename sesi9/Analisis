@@ -1,0 +1,9 @@
+ANALISIS HASIL
+
+Deteksi Tepi Roberts:
+Roberts lebih sensitif terhadap perubahan kecil dalam intensitas piksel, sehingga dapat menghasilkan
+tepi yang lebih tajam tetapi juga lebih rentan terhadap noise.
+
+Deteksi Tepi Sobel:
+Sobel memberikan hasil yang lebih halus dan lebih stabil terhadap noise, karena menggunakan konvolusi
+dengan kernel yang lebih besar. Ini membuatnya lebih baik dalam mendeteksi tepi yang lebih luas.

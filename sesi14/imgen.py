@@ -46,7 +46,7 @@ def enc(img,key,cho):
              result[j+1,k,2]= b2                          
      return result.astype(np.uint8)
  
-img=i.imread("C:\\Users\\deans\\Downloads\\jinping.jpg")
+img=i.imread("C:\\latihan\\jinping.jpg")
 key=np.array([
     [5,3],
     [3,2]
